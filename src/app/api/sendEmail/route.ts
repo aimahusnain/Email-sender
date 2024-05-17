@@ -18,8 +18,8 @@ export async function POST(req: NextRequest) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
+      from: email,
+      to: process.env.EMAIL_USER,
       subject: 'New Message',
       text: message,
     };

@@ -1,11 +1,11 @@
 // pages/index.tsx
-import EmailForm from '../components/EmailForm';
+import ContactForm from '../components/EmailForm';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Email Sender SaaS</h1>
-      <EmailForm />
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-10">
+      <h1 className="text-4xl font-bold mb-8 text-center">Email Sender SaaS</h1>
+      <ContactForm />
     </div>
   );
 }
