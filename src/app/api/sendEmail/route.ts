@@ -25,12 +25,18 @@ export async function POST(req: NextRequest) {
       to: process.env.EMAIL_USER,
       subject: `New Message From ${name}`,
       html: `
-      <div style="font-family: Arial, sans-serif;">
-      <h1 style="font-size: 24px; color: #333; text-align:center">New Message From "${name}"</h1>
-      <hr></hr>         
-      <p style="font-size: 16px; color: #666;"><strong>Name:</strong> ${name}</p>
-      <p style="font-size: 16px; color: #666;"><strong>Email:</strong> ${email}</p>
-      <p style="font-size: 16px; color: #666;"><strong>Message:</strong> ${message}</p>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+      <header style="background-color: #f5f5f5; padding: 20px; text-align: center;">
+        <h1 style="font-size: 24px; color: #333; margin: 0;">New Message From ${name}</h1>
+      </header>
+      <div style="padding: 20px;">
+        <p style="font-size: 16px; color: #666;"><strong>Name:</strong> ${name}</p>
+        <p style="font-size: 16px; color: #666;"><strong>Email:</strong> ${email}</p>
+        <p style="font-size: 16px; color: #666;"><strong>Message:</strong> ${message}</p>
+      </div>
+      <footer style="background-color: #f5f5f5; padding: 10px; text-align: center;">
+        <p style="font-size: 14px; color: #999; margin: 0;">&copy; ${new Date().getFullYear()} Wash Me Car Wash. All rights reserved.</p>
+      </footer>
     </div>
       `,
     };
