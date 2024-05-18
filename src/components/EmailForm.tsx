@@ -1,6 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
+import { Textarea } from './ui/textarea';
+import { Button } from './ui/button';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -49,43 +53,40 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
       <div className="mb-6">
-        <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
-        <input
+        <Label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</Label>
+        <Input
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-500 focus:outline-none"
         />
       </div>
       <div className="mb-6">
-        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
-        <input
+        <Label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</Label>
+        <Input
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-500 focus:outline-none"
         />
       </div>
       <div className="mb-6">
-        <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
-        <textarea
+        <Label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</Label>
+        <Textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-500 focus:outline-none h-32"
-        ></textarea>
+        ></Textarea>
       </div>
-      <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <Button type="submit" className='w-full'>
         Send Message
-      </button>
+      </Button>
     </form>
   );
 }
