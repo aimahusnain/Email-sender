@@ -15,8 +15,10 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 To sending the email to you or any email you need to setup .env.local.
+
 EMAIL_USER="example@website.com"
 EMAIL_PASS="123 abc 456 defg 789"
+
 This is not email Password you will get this from here:
 1. Go to [Google setting page](https://myaccount.google.com/)
 2. click on search tab
