@@ -26,8 +26,10 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+            name: formData.name,
           email: formData.email,
-          message: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+        //   message: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+          message: `${formData.message}`,
         }),
       });
 
