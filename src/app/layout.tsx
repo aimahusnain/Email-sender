@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Email Sender SaaS",
   description: "Email Sender website",
-  // themeColor: "#287efd"
+  // themeColor: "#0b7555"
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-      <meta name='theme-color' content="#287efd" />
+      <meta name='theme-color' content="#0b7555" />
     </head>
       <body className={inter.className}>{children}</body>
     </html>
